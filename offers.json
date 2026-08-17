@@ -1,0 +1,13 @@
+{
+  "_readme": "Edit this file to add/update offers. event_type must be big_wednesday, antim_budhabar, or big_saturday. event_date is YYYY-MM-DD. Set published:false to cancel a single date without touching the recurring rule. Any Wed/Sat with no entry here still shows using the default text below in generate_ics.py.",
+  "overrides": [
+    {
+      "event_date": "2026-08-22",
+      "event_type": "big_saturday",
+      "offer_title": "Big Saturday — Up to 25% Off!",
+      "details": "Up to 25% off selected items. Extra 5% for app users.",
+      "stores": "All Bigmart outlets, Kathmandu Valley",
+      "published": true
+    }
+  ]
+}

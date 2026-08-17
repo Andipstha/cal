@@ -1,0 +1,146 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bigmart Nepal//Offer Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bigmart Offer Calendar
+X-WR-CALDESC:Big Wednesday\, Antim Budhabar \& Big Saturday offers from Bigmart Nepal
+X-WR-TIMEZONE:Asia/Kathmandu
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:bigmart-big-wednesday-20260819@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:BIG WEDNESDAY 🛒
+DESCRIPTION:Big Wednesday — Storewide Savings\nNepali date: Bhadra 3\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 19 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-saturday-20260822@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:BIG SATURDAY 🛍️
+DESCRIPTION:Big Saturday — Up to 25% Off!\nNepali date: Bhadra 6\, 2083 BS\nUp to 25% off selected items. Extra 5% for app users.\nValid: 22 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-wednesday-20260826@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:BIG WEDNESDAY 🛒
+DESCRIPTION:Big Wednesday — Storewide Savings\nNepali date: Bhadra 10\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 26 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-saturday-20260829@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:BIG SATURDAY 🛍️
+DESCRIPTION:Big Saturday — Weekend Special\nNepali date: Bhadra 13\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 29 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-wednesday-20260902@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260903
+SUMMARY:BIG WEDNESDAY 🛒
+DESCRIPTION:Big Wednesday — Storewide Savings\nNepali date: Bhadra 17\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 02 Sep 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-saturday-20260905@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260906
+SUMMARY:BIG SATURDAY 🛍️
+DESCRIPTION:Big Saturday — Weekend Special\nNepali date: Bhadra 20\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 05 Sep 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-wednesday-20260909@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:BIG WEDNESDAY 🛒
+DESCRIPTION:Big Wednesday — Storewide Savings\nNepali date: Bhadra 24\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 09 Sep 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-big-saturday-20260912@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+SUMMARY:BIG SATURDAY 🛍️
+DESCRIPTION:Big Saturday — Weekend Special\nNepali date: Bhadra 27\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 12 Sep 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-antim-budhabar-20260916@bigmart.com.np
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:ANTIM BUDHABAR 🔴
+DESCRIPTION:Antim Budhabar — Month-End Mega Discount\nNepali date: Bhadra 31\, 2083 BS\nSpecial month-end discounts. Check bigmart.com.np for details.\nValid: 16 Sep 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

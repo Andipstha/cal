@@ -1,0 +1,45 @@
+name: Update Bigmart Offer Calendar
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "offers.json"
+      - "nepali_calendar.py"
+      - "generate_ics.py"
+  schedule:
+    # Runs every 15 minutes so date-based logic (e.g. "next month's last
+    # Wednesday") stays current even if nobody edits offers.json that day.
+    # GitHub's scheduler can lag a few minutes under load -- that's still
+    # far faster than Google Calendar's own 8-24h subscriber poll, so it's
+    # not the bottleneck.
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {} # lets you trigger a rebuild manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate cal.ics
+        run: python generate_ics.py
+
+      - name: Commit updated cal.ics (only if it actually changed)
+        run: |
+          git config user.name "bigmart-calendar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- cal.ics; then
+            echo "No change to cal.ics -- nothing to commit."
+          else
+            git add cal.ics
+            git commit -m "Update offer calendar [automated]"
+            git push
+          fi
