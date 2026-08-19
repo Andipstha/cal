@@ -1,0 +1,69 @@
+name: Update an Offer
+description: Add, change, or cancel a Bigmart calendar offer. No JSON or code needed.
+title: "Offer update"
+labels: ["offer-update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in and submit — the calendar updates on its own within a few minutes.
+        You don't need to know the exact rules; just pick the day and describe the offer.
+
+  - type: input
+    id: event_date
+    attributes:
+      label: Offer date
+      description: "Format: YYYY-MM-DD, e.g. 2026-08-29"
+      placeholder: "2026-08-29"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: event_type
+    attributes:
+      label: Which slot is this for?
+      description: Pick the one matching the date above.
+      options:
+        - Big Wednesday
+        - "Antim Budhabar (the month's last Wednesday)"
+        - Big Saturday
+        - "Special one-off offer (any date)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cancel
+    attributes:
+      label: Is this cancelling an offer, or publishing one?
+      options:
+        - "Publish this offer"
+        - "Cancel — remove the offer for this date (e.g. holiday closure)"
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: offer_title
+    attributes:
+      label: Offer headline
+      description: Leave blank if you selected Cancel above.
+      placeholder: "Big Saturday — 30% Off Dairy"
+    validations:
+      required: false
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Offer details
+      description: What's discounted, and any conditions. Leave blank if cancelling.
+      placeholder: "30% off all dairy products storewide. While stocks last."
+    validations:
+      required: false
+
+  - type: input
+    id: stores
+    attributes:
+      label: Participating stores
+      value: "All Bigmart outlets, Kathmandu Valley"
+    validations:
+      required: false
