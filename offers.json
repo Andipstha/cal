@@ -26,6 +26,15 @@
       "stores": "All Bigmart outlets, Kathmandu Valley",
       "published": true,
       "_updated_at": "2026-08-19T19:27:20.992245"
+    },
+    {
+      "event_date": "2026-08-26",
+      "event_type": "big_wednesday",
+      "offer_title": "TEST OFFER",
+      "details": "30% off on all products",
+      "stores": "All Bigmart outlets, Kathmandu Valley",
+      "published": true,
+      "_updated_at": "2026-08-19T19:41:53.579222"
     }
   ]
 }

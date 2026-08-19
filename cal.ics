@@ -40,11 +40,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bigmart-big-wednesday-20260826@bigmart.com.np
-DTSTAMP:20260101T000000Z
+DTSTAMP:20260819T194153Z
 DTSTART;VALUE=DATE:20260826
 DTEND;VALUE=DATE:20260827
 SUMMARY:BIG WEDNESDAY 🛒
-DESCRIPTION:Big Wednesday — Storewide Savings\nNepali date: Bhadra 10\, 2083 BS\nCheck in-store and bigmart.com.np for this week's discounts.\nValid: 26 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+DESCRIPTION:TEST OFFER\nNepali date: Bhadra 10\, 2083 BS\n30% off on all products\nValid: 26 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
 URL:https://bigmart.com.np/offers
 LOCATION:All Bigmart outlets\, Kathmandu Valley
 BEGIN:VALARM
