@@ -35,6 +35,15 @@
       "stores": "All Bigmart outlets, Kathmandu Valley",
       "published": true,
       "_updated_at": "2026-08-19T19:41:53.579222"
+    },
+    {
+      "event_date": "2026-08-20",
+      "event_type": "special_offer",
+      "offer_title": "Big Sandy OFFER",
+      "details": "USE: Promo Code SANDY10 to get 10% off",
+      "stores": "All Bigmart outlets, Kathmandu Valley",
+      "published": true,
+      "_updated_at": "2026-08-19T19:44:40.072524"
     }
   ]
 }
