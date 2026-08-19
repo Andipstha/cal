@@ -41,5 +41,14 @@ jobs:
           else
             git add cal.ics
             git commit -m "Update offer calendar [automated]"
+            # Rebase onto the latest remote main before pushing -- this run
+            # regenerates cal.ics from scratch every time, so a rebase can't
+            # produce a conflicting diff here, it just replays this commit on
+            # top of whatever landed most recently. Needed because
+            # apply-offer-from-issue.yml can also push a cal.ics commit
+            # (from a submitted offer), and without this, whichever workflow
+            # pushes second would be rejected as a non-fast-forward push.
+            git fetch origin main
+            git rebase origin/main
             git push
           fi
