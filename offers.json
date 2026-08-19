@@ -17,6 +17,15 @@
       "stores": "All Bigmart outlets, Kathmandu Valley",
       "published": true,
       "_updated_at": "2026-08-19T19:19:31.130875"
+    },
+    {
+      "event_date": "2026-08-23",
+      "event_type": "special_offer",
+      "offer_title": "UPTO - 20% off",
+      "details": "USE promo code:- SANDY20 to get upto 20 % OFF",
+      "stores": "All Bigmart outlets, Kathmandu Valley",
+      "published": true,
+      "_updated_at": "2026-08-19T19:27:20.992245"
     }
   ]
 }
