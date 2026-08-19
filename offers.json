@@ -4,10 +4,19 @@
     {
       "event_date": "2026-08-22",
       "event_type": "big_saturday",
-      "offer_title": "Big Saturday — Up to 25% Off!",
+      "offer_title": "Big Saturday \u2014 Up to 25% Off!",
       "details": "Up to 25% off selected items. Extra 5% for app users.",
       "stores": "All Bigmart outlets, Kathmandu Valley",
       "published": true
+    },
+    {
+      "event_date": "2026-08-21",
+      "event_type": "special_offer",
+      "offer_title": "Big Sandy OFFER upto 60% OFF",
+      "details": "Big Sandy OFFER upto 60% OFF",
+      "stores": "All Bigmart outlets, Kathmandu Valley",
+      "published": true,
+      "_updated_at": "2026-08-19T19:19:31.130875"
     }
   ]
 }
