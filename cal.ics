@@ -143,4 +143,49 @@ DESCRIPTION:Bigmart offer tomorrow — don't miss out!
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-special-offer-20260821@bigmart.com.np
+DTSTAMP:20260819T191931Z
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260822
+SUMMARY:SPECIAL OFFER 🎉
+DESCRIPTION:Big Sandy OFFER upto 60% OFF\nNepali date: Bhadra 5\, 2083 BS\nBig Sandy OFFER upto 60% OFF\nValid: 21 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-special-offer-20260823@bigmart.com.np
+DTSTAMP:20260819T192720Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:SPECIAL OFFER 🎉
+DESCRIPTION:UPTO - 20% off\nNepali date: Bhadra 7\, 2083 BS\nUSE promo code:- SANDY20 to get upto 20 % OFF\nValid: 23 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmart-special-offer-20260820@bigmart.com.np
+DTSTAMP:20260819T194440Z
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+SUMMARY:SPECIAL OFFER 🎉
+DESCRIPTION:Big Sandy OFFER\nNepali date: Bhadra 4\, 2083 BS\nUSE: Promo Code SANDY10 to get 10% off\nValid: 20 Aug 2026 only\nParticipating stores: All Bigmart outlets\, Kathmandu Valley\nDetails: https://bigmart.com.np/offers\nT&C apply. While stocks last. See bigmart.com.np/terms for details.
+URL:https://bigmart.com.np/offers
+LOCATION:All Bigmart outlets\, Kathmandu Valley
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bigmart offer tomorrow — don't miss out!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
