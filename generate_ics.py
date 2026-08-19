@@ -32,7 +32,16 @@ DEFAULT_CONTENT = {
         "offer_title": "Big Saturday — Weekend Special",
         "details": "Check in-store and bigmart.com.np for this week's discounts.",
     },
+    "special_offer": {
+        "summary": "SPECIAL OFFER \U0001F389",
+        "offer_title": "Special Offer",
+        "details": "Check bigmart.com.np for details.",
+    },
 }
+
+# Event types that only exist when explicitly added via an override -- they
+# have no automatic recurring schedule the way big_wednesday/big_saturday do.
+ONE_OFF_EVENT_TYPES = {"special_offer"}
 
 DEFAULT_STORES = "All Bigmart outlets, Kathmandu Valley"
 LINK = "https://bigmart.com.np/offers"
@@ -119,6 +128,20 @@ def main():
     all_events = []
     for bs_year, bs_month, _name, _start, _length in BS_MONTH_TABLE:
         all_events.extend(build_event_schedule(bs_year, bs_month))
+
+    # One-off event types (e.g. special_offer) aren't part of any recurring
+    # Wed/Sat rule -- they exist purely because an override for that exact
+    # date was added, so pull them straight from offers.json instead of
+    # from build_event_schedule.
+    from nepali_calendar import gregorian_to_bs_label
+    for (date_str, event_type), _override in overrides.items():
+        if event_type in ONE_OFF_EVENT_TYPES:
+            d = dt.date.fromisoformat(date_str)
+            all_events.append({
+                "date": d,
+                "event_type": event_type,
+                "bs_label": gregorian_to_bs_label(d),
+            })
 
     vevents = [v for e in all_events if (v := build_vevent(e, overrides))]
 
