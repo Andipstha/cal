@@ -1,379 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bigmart Offer Calendar — Subscribe</title>
-<meta name="description" content="Get Big Wednesday, Antim Budhabar and Big Saturday offers straight into your phone's calendar.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --marigold: #EFA23D;
-    --marigold-deep: #D98A22;
-    --chili: #C6432B;
-    --forest: #1F5C4C;
-    --forest-deep: #163F34;
-    --paper: #F7EFDD;
-    --paper-raised: #FFFBF1;
-    --ink: #211D17;
-    --ink-soft: #6B6255;
-    --line: rgba(33,29,23,0.12);
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bigmart Offer Calendar — Subscribe</title>
+  <meta name="description"
+    content="Get Big Wednesday, Antim Budhabar and Big Saturday offers straight into your phone's calendar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --marigold: #EFA23D;
+      --marigold-deep: #D98A22;
+      --chili: #C6432B;
+      --forest: #1F5C4C;
+      --forest-deep: #163F34;
+      --paper: #F7EFDD;
+      --paper-raised: #FFFBF1;
+      --ink: #211D17;
+      --ink-soft: #6B6255;
+      --line: rgba(33, 29, 23, 0.12);
+    }
 
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Work Sans', system-ui, sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .wrap{max-width:480px;margin:0 auto;padding:0 20px 64px;}
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
 
-  /* ---------- Hero ---------- */
-  .hero{
-    padding:40px 0 8px;
-    text-align:center;
-  }
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--forest);
-    background:rgba(31,92,76,0.09);
-    padding:6px 12px;
-    border-radius:100px;
-    margin-bottom:20px;
-  }
-  .eyebrow::before{content:"●";color:var(--chili);font-size:8px;}
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Work Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
 
-  h1{
-    font-family:'Baloo 2', sans-serif;
-    font-weight:800;
-    font-size:clamp(30px, 8vw, 40px);
-    line-height:1.08;
-    margin:0 0 14px;
-    letter-spacing:-0.01em;
-  }
-  h1 .accent{color:var(--chili);}
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 20px 64px;
+    }
 
-  .sub{
-    color:var(--ink-soft);
-    font-size:16px;
-    max-width:36ch;
-    margin:0 auto 28px;
-  }
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: 40px 0 8px;
+      text-align: center;
+    }
 
-  /* ---------- CTA button ---------- */
-  .cta{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    width:100%;
-    padding:17px 20px;
-    border-radius:16px;
-    background:var(--forest);
-    color:var(--paper-raised);
-    font-family:'Work Sans', sans-serif;
-    font-weight:600;
-    font-size:16.5px;
-    text-decoration:none;
-    border:none;
-    box-shadow:0 6px 0 var(--forest-deep);
-    transition:transform .12s ease, box-shadow .12s ease;
-  }
-  .cta:active{transform:translateY(4px);box-shadow:0 2px 0 var(--forest-deep);}
-  .cta svg{flex-shrink:0;}
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--forest);
+      background: rgba(31, 92, 76, 0.09);
+      padding: 6px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
 
-  .cta-note{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    text-align:center;
-    margin:10px 0 0;
-  }
+    .eyebrow::before {
+      content: "●";
+      color: var(--chili);
+      font-size: 8px;
+    }
 
-  /* ---------- Weekly strip (signature element) ---------- */
-  .strip-card{
-    margin:36px 0 8px;
-    background:var(--paper-raised);
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:20px 18px 18px;
-  }
-  .strip-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-bottom:14px;
-  }
-  .strip{
-    display:grid;
-    grid-template-columns:repeat(7, 1fr);
-    gap:6px;
-  }
-  .day{
-    aspect-ratio:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    border-radius:10px;
-    background:transparent;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px;
-    color:var(--ink-soft);
-  }
-  .day .l{font-size:9px;letter-spacing:0.03em;}
-  .day.wed{background:var(--marigold);color:var(--ink);font-weight:600;}
-  .day.sat{background:var(--forest);color:var(--paper-raised);font-weight:600;}
-  .day.antim{background:var(--chili);color:var(--paper-raised);font-weight:600;position:relative;}
-  .strip-legend{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    margin-top:16px;
-    font-size:12.5px;
-    color:var(--ink-soft);
-  }
-  .strip-legend span{display:flex;align-items:center;gap:6px;}
-  .dot{width:9px;height:9px;border-radius:3px;display:inline-block;}
-  .dot.wed{background:var(--marigold);}
-  .dot.sat{background:var(--forest);}
-  .dot.antim{background:var(--chili);}
+    h1 {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 800;
+      font-size: clamp(30px, 8vw, 40px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: -0.01em;
+    }
 
-  /* ---------- Offer cards ---------- */
-  .offers{margin:32px 0 0;display:flex;flex-direction:column;gap:10px;}
-  .offer{
-    display:flex;
-    gap:14px;
-    align-items:flex-start;
-    padding:16px;
-    border-radius:16px;
-    background:var(--paper-raised);
-    border:1px solid var(--line);
-  }
-  .offer .swatch{
-    width:38px;height:38px;border-radius:10px;flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    font-size:18px;
-  }
-  .offer.o-wed .swatch{background:var(--marigold);}
-  .offer.o-sat .swatch{background:var(--forest);}
-  .offer.o-antim .swatch{background:var(--chili);}
-  .offer h3{font-family:'Baloo 2';font-size:16.5px;margin:0 0 3px;font-weight:700;}
-  .offer p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+    h1 .accent {
+      color: var(--chili);
+    }
 
-  /* ---------- Steps ---------- */
-  .steps{
-    margin:36px 0 0;
-    counter-reset:step;
-  }
-  .steps h2{
-    font-family:'Baloo 2';font-size:15px;font-weight:700;
-    text-align:center;margin:0 0 18px;color:var(--ink-soft);
-    letter-spacing:0.01em;
-  }
-  .step-row{display:flex;gap:14px;margin-bottom:16px;}
-  .step-row:last-child{margin-bottom:0;}
-  .step-num{
-    counter-increment:step;
-    width:28px;height:28px;border-radius:50%;
-    background:var(--ink);color:var(--paper);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'IBM Plex Mono';font-size:12px;font-weight:500;
-    flex-shrink:0;
-  }
-  .step-num::before{content:counter(step);}
-  .step-text strong{display:block;font-size:14.5px;margin-bottom:1px;}
-  .step-text span{font-size:13px;color:var(--ink-soft);}
+    .sub {
+      color: var(--ink-soft);
+      font-size: 16px;
+      max-width: 36ch;
+      margin: 0 auto 28px;
+    }
 
-  /* ---------- Manual / other options ---------- */
-  details{
-    margin-top:32px;
-    border-top:1px solid var(--line);
-    padding-top:18px;
-  }
-  summary{
-    cursor:pointer;
-    font-family:'Work Sans';
-    font-weight:600;
-    font-size:14px;
-    color:var(--forest);
-    list-style:none;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-  summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";font-size:18px;color:var(--ink-soft);}
-  details[open] summary::after{content:"–";}
-  .manual-links{margin-top:16px;display:flex;flex-direction:column;gap:10px;}
-  .manual-link{
-    display:flex;justify-content:space-between;align-items:center;
-    padding:13px 15px;border-radius:12px;background:var(--paper-raised);
-    border:1px solid var(--line);text-decoration:none;color:var(--ink);
-    font-size:13.5px;font-weight:500;
-  }
-  .manual-link small{display:block;color:var(--ink-soft);font-weight:400;font-size:12px;margin-top:2px;}
-  .manual-link .arrow{color:var(--ink-soft);}
-  #copy-toast{
-    display:none;
-    text-align:center;font-size:12.5px;color:var(--forest);
-    font-weight:600;margin-top:8px;
-  }
+    /* ---------- CTA button ---------- */
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 17px 20px;
+      border-radius: 16px;
+      background: var(--forest);
+      color: var(--paper-raised);
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 16.5px;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 6px 0 var(--forest-deep);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
 
-  footer{
-    margin-top:40px;
-    text-align:center;
-    font-size:12px;
-    color:var(--ink-soft);
-  }
-  footer a{color:var(--ink-soft);}
+    .cta:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 var(--forest-deep);
+    }
 
-  @media (prefers-reduced-motion: reduce){
-    .cta{transition:none;}
-  }
-</style>
+    .cta svg {
+      flex-shrink: 0;
+    }
+
+    .cta-note {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 10px 0 0;
+    }
+
+    /* ---------- Weekly strip (signature element) ---------- */
+    .strip-card {
+      margin: 36px 0 8px;
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px 18px 18px;
+    }
+
+    .strip-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+
+    .strip {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+
+    .day {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 10px;
+      background: transparent;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10.5px;
+      color: var(--ink-soft);
+    }
+
+    .day .l {
+      font-size: 9px;
+      letter-spacing: 0.03em;
+    }
+
+    .day.wed {
+      background: var(--marigold);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .day.sat {
+      background: var(--forest);
+      color: var(--paper-raised);
+      font-weight: 600;
+    }
+
+    .day.antim {
+      background: var(--chili);
+      color: var(--paper-raised);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .strip-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 16px;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+    }
+
+    .strip-legend span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .dot.wed {
+      background: var(--marigold);
+    }
+
+    .dot.sat {
+      background: var(--forest);
+    }
+
+    .dot.antim {
+      background: var(--chili);
+    }
+
+    /* ---------- Offer cards ---------- */
+    .offers {
+      margin: 32px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .offer {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+    }
+
+    .offer .swatch {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .offer.o-wed .swatch {
+      background: var(--marigold);
+    }
+
+    .offer.o-sat .swatch {
+      background: var(--forest);
+    }
+
+    .offer.o-antim .swatch {
+      background: var(--chili);
+    }
+
+    .offer h3 {
+      font-family: 'Baloo 2';
+      font-size: 16.5px;
+      margin: 0 0 3px;
+      font-weight: 700;
+    }
+
+    .offer p {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- Steps ---------- */
+    .steps {
+      margin: 36px 0 0;
+      counter-reset: step;
+    }
+
+    .steps h2 {
+      font-family: 'Baloo 2';
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+      letter-spacing: 0.01em;
+    }
+
+    .step-row {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .step-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-num {
+      counter-increment: step;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'IBM Plex Mono';
+      font-size: 12px;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .step-num::before {
+      content: counter(step);
+    }
+
+    .step-text strong {
+      display: block;
+      font-size: 14.5px;
+      margin-bottom: 1px;
+    }
+
+    .step-text span {
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- Manual / other options ---------- */
+    details {
+      margin-top: 32px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-family: 'Work Sans';
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--forest);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 18px;
+      color: var(--ink-soft);
+    }
+
+    details[open] summary::after {
+      content: "–";
+    }
+
+    .manual-links {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .manual-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 15px;
+      border-radius: 12px;
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .manual-link small {
+      display: block;
+      color: var(--ink-soft);
+      font-weight: 400;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .manual-link .arrow {
+      color: var(--ink-soft);
+    }
+
+    #copy-toast {
+      display: none;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--forest);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    footer a {
+      color: var(--ink-soft);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta {
+        transition: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrap">
+  <div class="wrap">
 
-  <div class="hero">
-    <span class="eyebrow">Bigmart offer calendar</span>
-    <h1>Never miss a<br><span class="accent">Bigmart</span> offer day</h1>
-    <p class="sub">Big Wednesday, Antim Budhabar and Big Saturday — added straight to your phone, updated automatically.</p>
+    <div class="hero">
+      <span class="eyebrow">Bigmart offer calendar</span>
+      <h1>Never miss a<br><span class="accent">Bigmart</span> offer day</h1>
+      <p class="sub">Big Wednesday, Antim Budhabar and Big Saturday — added straight to your phone, updated
+        automatically.</p>
 
-    <a id="primary-cta" class="cta" href="webcal://www.sandipshrestha0.com.np/cal/cal.ics">
-      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 10H21" stroke="currentColor" stroke-width="2"/><path d="M8 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <span id="cta-label">Add to my calendar</span>
-    </a>
-    <p class="cta-note" id="cta-note">One tap. Updates happen on their own — nothing to reopen.</p>
-  </div>
-
-  <div class="strip-card">
-    <div class="strip-label">How the week works</div>
-    <div class="strip" id="week-strip">
-      <div class="day"><span class="l">MON</span></div>
-      <div class="day"><span class="l">TUE</span></div>
-      <div class="day wed"><span class="l">WED</span></div>
-      <div class="day"><span class="l">THU</span></div>
-      <div class="day"><span class="l">FRI</span></div>
-      <div class="day sat"><span class="l">SAT</span></div>
-      <div class="day"><span class="l">SUN</span></div>
-    </div>
-    <div class="strip-legend">
-      <span><i class="dot wed"></i>Big Wednesday</span>
-      <span><i class="dot sat"></i>Big Saturday</span>
-      <span><i class="dot antim"></i>Antim Budhabar (month's last Wed)</span>
-    </div>
-  </div>
-
-  <div class="offers">
-    <div class="offer o-wed">
-      <div class="swatch">🛒</div>
-      <div><h3>Big Wednesday</h3><p>Every Wednesday, storewide savings.</p></div>
-    </div>
-    <div class="offer o-antim">
-      <div class="swatch">🔴</div>
-      <div><h3>Antim Budhabar</h3><p>The last Wednesday of the month — bigger, month-end discounts. Replaces that week's Big Wednesday, so it only shows up once.</p></div>
-    </div>
-    <div class="offer o-sat">
-      <div class="swatch">🛍️</div>
-      <div><h3>Big Saturday</h3><p>Every Saturday, weekend specials.</p></div>
-    </div>
-  </div>
-
-  <div class="steps">
-    <h2>Scan · Subscribe · Done</h2>
-    <div class="step-row">
-      <div class="step-num"></div>
-      <div class="step-text"><strong>Scan the QR code</strong><span>Opens this page on your phone.</span></div>
-    </div>
-    <div class="step-row">
-      <div class="step-num"></div>
-      <div class="step-text"><strong>Tap "Add to my calendar"</strong><span>Your phone recognizes it and offers to subscribe.</span></div>
-    </div>
-    <div class="step-row">
-      <div class="step-num"></div>
-      <div class="step-text"><strong>You're set</strong><span>New and updated offers appear on their own — no need to come back here.</span></div>
-    </div>
-  </div>
-
-  <details id="manual-details">
-    <summary>Other ways to add it</summary>
-    <div class="manual-links">
-      <a class="manual-link" href="webcal://www.sandipshrestha0.com.np/cal.ics">
-        <span>iPhone / iPad<small>Opens Apple Calendar directly</small></span>
-        <span class="arrow">→</span>
+      <a id="primary-cta" class="cta" href="webcal://www.sandipshrestha0.com.np/cal/cal.ics">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="2" />
+          <path d="M3 10H21" stroke="currentColor" stroke-width="2" />
+          <path d="M8 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M16 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span id="cta-label">Add to my calendar</span>
       </a>
-      <a class="manual-link" id="google-link" href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fwww.sandipshrestha0.com.np%2Fcal.ics">
-        <span>Android / Google Calendar<small>Opens Google Calendar's subscribe screen</small></span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="manual-link" id="copy-link" href="#">
-        <span>Copy the calendar link<small>Paste into any calendar app's "Add by URL"</small></span>
-        <span class="arrow">⧉</span>
-      </a>
+      <p class="cta-note" id="cta-note">One tap. Updates happen on their own — nothing to reopen.</p>
     </div>
-    <p id="copy-toast">Link copied</p>
-  </details>
 
-  <footer>
-    Bigmart Nepal · <a href="https://bigmart.com.np">bigmart.com.np</a> · <a href="https://bigmart.com.np/terms">Terms</a>
-  </footer>
+    <div class="strip-card">
+      <div class="strip-label">How the week works</div>
+      <div class="strip" id="week-strip">
+        <div class="day"><span class="l">MON</span></div>
+        <div class="day"><span class="l">TUE</span></div>
+        <div class="day wed"><span class="l">WED</span></div>
+        <div class="day"><span class="l">THU</span></div>
+        <div class="day"><span class="l">FRI</span></div>
+        <div class="day sat"><span class="l">SAT</span></div>
+        <div class="day"><span class="l">SUN</span></div>
+      </div>
+      <div class="strip-legend">
+        <span><i class="dot wed"></i>Big Wednesday</span>
+        <span><i class="dot sat"></i>Big Saturday</span>
+        <span><i class="dot antim"></i>Antim Budhabar (month's last Wed)</span>
+      </div>
+    </div>
 
-</div>
+    <div class="offers">
+      <div class="offer o-wed">
+        <div class="swatch">🛒</div>
+        <div>
+          <h3>Big Wednesday</h3>
+          <p>Every Wednesday, storewide savings.</p>
+        </div>
+      </div>
+      <div class="offer o-antim">
+        <div class="swatch">🔴</div>
+        <div>
+          <h3>Antim Budhabar</h3>
+          <p>The last Wednesday of the month — bigger, month-end discounts. Replaces that week's Big Wednesday, so it
+            only shows up once.</p>
+        </div>
+      </div>
+      <div class="offer o-sat">
+        <div class="swatch">🛍️</div>
+        <div>
+          <h3>Big Saturday</h3>
+          <p>Every Saturday, weekend specials.</p>
+        </div>
+      </div>
+    </div>
 
-<script>
-(function(){
-  var ua = navigator.userAgent || "";
-  var isIOS = /iPad|iPhone|iPod/.test(ua) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var isAndroid = /Android/.test(ua);
+    <div class="steps">
+      <h2>Scan · Subscribe · Done</h2>
+      <div class="step-row">
+        <div class="step-num"></div>
+        <div class="step-text"><strong>Scan the QR code</strong><span>Opens this page on your phone.</span></div>
+      </div>
+      <div class="step-row">
+        <div class="step-num"></div>
+        <div class="step-text"><strong>Tap "Add to my calendar"</strong><span>Your phone recognizes it and offers to
+            subscribe.</span></div>
+      </div>
+      <div class="step-row">
+        <div class="step-num"></div>
+        <div class="step-text"><strong>You're set</strong><span>New and updated offers appear on their own — no need to
+            come back here.</span></div>
+      </div>
+    </div>
 
-  var WEBCAL_URL = "webcal://www.sandipshrestha0.com.np/cal.ics";
-  var HTTPS_URL = "https://www.sandipshrestha0.com.np/cal.ics";
-  var GCAL_URL = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(WEBCAL_URL);
+    <details id="manual-details">
+      <summary>Other ways to add it</summary>
+      <div class="manual-links">
+        <a class="manual-link" href="webcal://www.sandipshrestha0.com.np/cal.ics">
+          <span>iPhone / iPad<small>Opens Apple Calendar directly</small></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="manual-link" id="google-link"
+          href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fwww.sandipshrestha0.com.np%2Fcal.ics">
+          <span>Android / Google Calendar<small>Opens Google Calendar's subscribe screen</small></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="manual-link" id="copy-link" href="#">
+          <span>Copy the calendar link<small>Paste into any calendar app's "Add by URL"</small></span>
+          <span class="arrow">⧉</span>
+        </a>
+      </div>
+      <p id="copy-toast">Link copied</p>
+    </details>
 
-  var primary = document.getElementById("primary-cta");
-  var label = document.getElementById("cta-label");
-  var note = document.getElementById("cta-note");
+    <footer>
+      Bigmart Nepal · <a href="https://bigmart.com.np">bigmart.com.np</a> · <a
+        href="https://bigmart.com.np/terms">Terms</a>
+    </footer>
 
-  if (isAndroid) {
-    primary.href = GCAL_URL;
-    label.textContent = "Add to Google Calendar";
-  } else if (isIOS) {
-    primary.href = WEBCAL_URL;
-    label.textContent = "Add to iPhone Calendar";
-  } else {
-    // Desktop / unknown device: keep the calendar app deep link as default,
-    // but nudge toward scanning with a phone since that's the real flow.
-    label.textContent = "Add to my calendar";
-    note.textContent = "On a computer? Scan the QR code with your phone instead — it'll open this page there.";
-  }
+  </div>
 
-  document.getElementById("copy-link").addEventListener("click", function(e){
-    e.preventDefault();
-    navigator.clipboard.writeText(HTTPS_URL).then(function(){
-      var toast = document.getElementById("copy-toast");
-      toast.style.display = "block";
-      setTimeout(function(){ toast.style.display = "none"; }, 2000);
-    });
-  });
-})();
-</script>
+  <script>
+    (function () {
+      var ua = navigator.userAgent || "";
+      var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+
+      var WEBCAL_URL = "webcal://www.sandipshrestha0.com.np/cal.ics";
+      var HTTPS_URL = "https://www.sandipshrestha0.com.np/cal.ics";
+      var GCAL_URL = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(WEBCAL_URL);
+
+      var primary = document.getElementById("primary-cta");
+      var label = document.getElementById("cta-label");
+      var note = document.getElementById("cta-note");
+
+      if (isAndroid) {
+        primary.href = GCAL_URL;
+        label.textContent = "Add to Google Calendar";
+      } else if (isIOS) {
+        primary.href = WEBCAL_URL;
+        label.textContent = "Add to iPhone Calendar";
+      } else {
+        // Desktop / unknown device: keep the calendar app deep link as default,
+        // but nudge toward scanning with a phone since that's the real flow.
+        label.textContent = "Add to my calendar";
+        note.textContent = "On a computer? Scan the QR code with your phone instead — it'll open this page there.";
+      }
+
+      document.getElementById("copy-link").addEventListener("click", function (e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(HTTPS_URL).then(function () {
+          var toast = document.getElementById("copy-toast");
+          toast.style.display = "block";
+          setTimeout(function () { toast.style.display = "none"; }, 2000);
+        });
+      });
+    })();
+  </script>
 
 </body>
+
 </html>
