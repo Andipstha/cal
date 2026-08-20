@@ -118,6 +118,17 @@ def build_vevent(event: dict, overrides: dict) -> Optional[str]:
         "DESCRIPTION:Bigmart offer tomorrow \u2014 don't miss out!",
         "TRIGGER:-P1D",
         "END:VALARM",
+        # Second alarm, same morning at 9am -- not redundant with the one
+        # above. A subscriber's calendar can sync late (Google: up to 24h),
+        # so the "-1 day" alarm's trigger moment can already be in the past
+        # by the time the event even reaches their calendar, and a missed
+        # trigger time never fires retroactively. This second alarm gives a
+        # later, same-day chance to still notify even when that happens.
+        "BEGIN:VALARM",
+        "ACTION:DISPLAY",
+        "DESCRIPTION:Bigmart offer today \u2014 don't miss out!",
+        "TRIGGER;VALUE=DURATION:PT9H",
+        "END:VALARM",
         "END:VEVENT",
     ])
 
@@ -154,8 +165,8 @@ def main():
         "X-WR-CALNAME:Bigmart Offer Calendar",
         "X-WR-CALDESC:Big Wednesday\\, Antim Budhabar \\& Big Saturday offers from Bigmart Nepal",
         "X-WR-TIMEZONE:Asia/Kathmandu",
-        "REFRESH-INTERVAL;VALUE=DURATION:PT1H",
-        "X-PUBLISHED-TTL:PT1H",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT15M",
+        "X-PUBLISHED-TTL:PT15M",
         *vevents,
         "END:VCALENDAR",
     ])
